@@ -1,0 +1,138 @@
+{
+    "swagger": "2.0",
+    "info":
+     {
+        "version": "1.0.0",
+        "description": "Query operations",
+        "title": "CRUD operations using ASYNC"
+     },
+        "host": "localhost:5000",
+        "basePath": "/",
+        "schemes": ["http"],
+    "paths": 
+    {
+        "/addstudent": 
+         {
+            "post":
+            
+            {
+                "description": "Api of insert",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username",
+                        "id": "id",
+                        "in": "formData",
+                        "example": "1"
+                    },
+                    {
+                        "type": "string",
+                        "description": "name",
+                        "name": "name",
+                        "in": "formData",
+                        "example": "Yadwinder"
+                    },
+                    {
+                        "type": "string",
+                        "description": "class",
+                        "class": "class",
+                        "in": "formData",
+                        "example": "10th"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Email",
+                        "RollNo": "rollno",
+                        "in": "formData",
+                        "example": "2015"
+                    }
+                               ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+           
+        },
+        "/students":
+         {
+            "get": 
+            {
+                "description": "To show the student details",
+                "responses":
+                 {
+                    "200": 
+                    {
+                        "description": "Successfully fetched the data"
+                    }
+                 }
+            }
+            
+          },
+          "/students/2":
+          {
+             "delete": 
+             {
+                 "description": "To delete the id",
+                 "responses":
+                  {
+                     "200": 
+                     {
+                         "description": "Successfully fetched the data"
+                     }
+                  }
+             }
+             
+         },
+         "/students/1":
+         {
+            "put": 
+            {
+                "description": "Api of insert",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username",
+                        "id": "id",
+                        "in": "formData",
+                        "example": "1"
+                    },
+                    {
+                        "type": "string",
+                        "description": "name",
+                        "name": "name",
+                        "in": "formData",
+                        "example": "Yadwinder"
+                    },
+                    {
+                        "type": "string",
+                        "description": "class",
+                        "class": "class",
+                        "in": "formData",
+                        "example": "10th"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Email",
+                        "RollNo": "rollno",
+                        "in": "formData",
+                        "example": "2015"
+                    }
+                               ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+          
+            
+        }
+        
+    }
+}
